@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo element</title>
+    <style>
+    .para1{
+        font-size: 1.5em;
+        letter-spacing: 2px;
+        line-height: 1.5em;
+    }
+    .para1::first-line{
+        /* ilk satırın ozellıkleri */
+        color: red;
+    }
+    .para1::first-letter{
+        /* ilk harfini değiştiriyor */
+        color: blue;
+        font-size: 50px;
+    }
+    .para1::after{
+        content: "paragraf sonrası eklenecek yazı";
+    }
+    .para1::before{
+        content: "paragraf oncesi yazı";
+    }
+    </style>
+</head>
+<body>
+    <p class="para1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores soluta labore eveniet, consequatur ad maxime cum eos! Quod, fugit ratione.</p>
+</body>
+</html>
