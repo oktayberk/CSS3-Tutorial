@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nth-Child Selector</title>
+    <style>
+        
+        ul{
+            font-size: 1.5em;
+            list-style-type: none;
+        }
+        /* n=0 b=0  0, 2 , 4, 6, 8, 10 */
+        ul li:nth-child(2n){
+            /* çiftleri işaretler */
+            color: red;
+        }
+        ul li:nth-child(2n+1){
+            color : blue;
+    
+        }
+        /* p:first-child{ */
+            /* ilk p elementinin ozellıgı */
+            /* background: blue; */
+        /* } */
+        /* p:nth-child(1){ */
+            /* buda il p elementının ozellıgı */
+            /* color: red; */
+        /* } */
+        /* p:nth-child(3){ */
+            /* color: seagreen; */
+        /* } */
+        /* p:nth-child(even){ */
+            /* çift olanlar */
+            /* color: red;
+        }
+        p:nth-child(odd){
+            color: blue;
+        } */
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>element</li>
+        <li>element</li>
+        <li>element</li>
+        <li>element</li>
+        <li>element</li>
+        <li>element</li>
+        <li>element</li>
+        <li>element</li>
+        <li>element</li>
+        <li>element</li>
+    </ul>
+    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, corporis!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, corporis!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, corporis!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, corporis!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, corporis!</p> -->
+
+</body>
+</html>
