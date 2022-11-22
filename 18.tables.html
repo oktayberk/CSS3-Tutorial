@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables styling</title>
+    <style>
+        table,tr,td,th{
+            /* butun hepsinin çerçevesi ve özelligi */
+            border: 1px solid red;
+            border-collapse: collapse;
+        }
+        table{
+            /* tablonun buyuklugu sag ve sol oranı yazı buyuklugu */
+            width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1.5em;
+        }
+        th,td{
+            /* th ve tdlerin apddingi */
+            padding: 10px;
+        }
+        thead tr{
+            /* tablo basının ozellıkleri */
+            background:green;
+            color: white;
+        }
+        tbody tr{
+            /* bodey de trlerin içindekilerin ozxellıgı yazıları ortaladık */
+            text-align: center;
+        }
+        tbody tr:nth-child(even){
+            /*bodyde  tr altındakiçiftleri boyadık */
+            background: #a7a7a7;
+        }
+        tbody tr:hover{
+            /*bodey de trlerin üzerine mouse geldiginde arka palna renkleri degişsin istiyoruz */
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <table class="employees">
+        <thead>
+            <tr>
+                <th>Ad</th>
+                <th>Departman</th>
+                <th>Maaş</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Oktay</td>
+                <td>Bilişim</td>
+                <td>5000</td>
+            </tr>
+            <tr>
+                <td>Oktay</td>
+                <td>Bilişim</td>
+                <td>5000</td>
+            </tr>
+            <tr>
+                <td>Oktay</td>
+                <td>Bilişim</td>
+                <td>5000</td>
+            </tr>
+            <tr>
+                <td>Oktay</td>
+                <td>Bilişim</td>
+                <td>5000</td>
+            </tr>
+            
+        </tbody>
+    </table>
+</body>
+</html>
