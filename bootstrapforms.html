@@ -1,0 +1,108 @@
+<!-- ACILIR KUTULAR  https://getbootstrap.com/docs/5.2/components/dropdowns/ !!! -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="col-md-6">
+        <form>
+          <div class="form-group">
+            <label for="firstName">First name:</label>
+            <input
+              type="text"
+              class="form-control form-control-lg"
+              id="firstName"
+              placeholder="isim giriniz"
+            />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Soyad:</label>
+            <input
+              type="text"
+              class="form-control form-control-sm"
+              id="lastName"
+              placeholder="soyad giriniz"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Parola:</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="pass giriniz"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="email giriniz"
+            />
+          </div>
+          <div class="form-group">
+            <label for="city">City:</label>
+            <select class="form-control" id="city">
+              <option>ankara</option>
+              <option>istanbul</option>
+              <option>izmir</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="bio">Hakkında:</label>
+            <textarea
+              rows="5"
+              type="textarea"
+              class="form-control"
+              id="bio"
+            ></textarea>
+          </div>
+          <div class="form-check disabled">
+            <label for="term">okudum,anladım:</label>
+            <input
+              type="checkbox"
+              disabled
+              checked="true"
+              class="form-check-input"
+              id="term"
+            />
+          </div>
+          <div class="form-check">
+            <label for="radio">okudum,anladım:</label>
+            <input type="radio" class="form-check-input" id="radio" />
+          </div>
+          <button type="submit" class="btn btn-success">option</button>
+        </form>
+      </div>
+    </div>
+  </body>
+
+  <script
+    src="/docs/5.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+    integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+    crossorigin="anonymous"
+  ></script>
+</html>
