@@ -11,7 +11,7 @@
             color: red;
             background-color: blue;
         } 
-        p{
+        p{ 
             color: green;
             background-color: aqua;
         } */
@@ -63,9 +63,134 @@
         *{
             font-size: 20px;
         }
-        
 
-    </style>
+        /* dive background image atamadk için */
+      .box-1{
+        color: red;
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Ataturk1930s.jpg/220px-Ataturk1930s.jpg");
+        background-size: cover;        /*  cobver resmin tam larakkaplamnasını saglıyor*/
+        width: 640px;
+        height: 360px;
+      }
+      /* butun bodye arkaplan yapmak istersek */
+      body{
+        background-image: url("https://upload.wikimedia.org/wikipedia/tr/thumb/2/2e/Java_Logo.svg/1200px-Java_Logo.svg.png");
+        background-size: 100px;
+        background-repeat: no-repeat;        /*resmin tekrarlanammasını saglar  */
+        background-position: right top;        /* resmi saga ve üste ekler */
+        background-attachment: fixed;        /* scrolla asagı ındıgımızde resmin sabit kalmasını saglıyor */
+        /* ayrıca tek ssatırdada bu ozellıklerı verebiliriz: */
+        /* background: url("https://upload.wikimedia.org/wikipedia/tr/thumb/2/2e/Java_Logo.svg/1200px-Java_Logo.svg.png") no-repeat center center fixed; */
+      }
+
+      /* border ve radius */
+      .box-1{
+        /* width kalınlık,style solif sabit olmas,color rengi, radius köşelerin düzeltilmesi */
+        border-width: 5px;
+        border-color: red;
+        border-style: solid;
+        /* border radius heiıght ve width kadar verirsek yuvarlak olur örn:wei:50px width:50px border:50px */
+        border-radius: 10px;
+      /* border: 5px red solid ; ile tek satırda verilebilir */
+      /* ayrıca belirli kenarlara işlem yapılabilri: */
+        border-left-color: yellow;
+
+    }
+    /* divlere boyut verirken yüzdeli verirsek sabit bir pixeli olmaz */
+    div#box2{
+
+      width: 50%;
+      height: 100px;
+      background: #a7a7a7;;
+    }
+    /* burada box3 box 2 nin içindeki bir div oldugu için onun yuzde 50sini alır */
+    div#box3{
+
+      width: 50%;
+      height: 50%;
+      background: red;
+    }
+
+    /* maxwidth ile pixel en fazla 500px e cıkabilir. sonrasında artmaz  */
+    div#box4{
+      background: blue;
+      max-width: 500px;
+      height: 100px;
+    }
+
+    /* box 6 ve 7-8 de display ozellıgı */
+    /* normalde inline elemanlara witdh ve height veremiyoruz. Burada biz inlineblock ile witdh ve heigt verebilir ve inline gibi kullanabiliriz */
+    /* inline block elementlere witdh ve height verebilriiriz ve bu durumda inline kadar yer kapalr */
+    .box6{
+      width: 50%;
+      height: 100px;
+      display: inline-block;
+    }
+    .box7{
+      background-color: purple;
+    }
+    .box8{
+      background-color: peru;
+    }
+
+    /* margin padding border */
+    /* contetimiz yani içerigimiz ve borderımızı(cercevemizi) ogrendik. */
+    /* border ile contet arasındaki mesafeye padding diyoruz. Yani içerik ile çerçeve arasındaki mesafemız  */
+    /* border ile sayfa arasındaki mesafeye ise margin diyoruz. Yani çerçevenin dışındaki alan. Bu adlan diger elementlere olan mesafeyi gosterir */
+    div.box9{
+      margin: 0;
+      padding: 0;
+      /* margin left sol tarafla divimiz arasında bir boşluk bırakır */
+      margin-left: 30px;
+      margin-right: 30px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      /* margini tek satırda vermek istersek :
+      top right bottom left şeklinde veririz */
+      margin: 35px 20px 35px 20px;
+      /* veya top-bottom, rightleft olarak verilebilir */
+      margin: 33px 22px;
+    }
+    /* marginin ortalanması */
+    div.box10{
+      width: 50%;
+      background: yellow;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 0;
+     margin-bottom: 0;
+     /* margin: 0 auto; da yazabiliriz */
+    }
+
+    /* padding ozellıkleri */
+    div.box11{
+      /* width ve height verdigimizde sadece content alanına veriyoruz.*/
+      width: 500px;
+      height: 200px;
+      border: 5px solid black;
+      /* padding left contet ile bborder arasına bir mesafebırakır */
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      /* padding: top right bottom left  
+      veya her yer aynı olsun ıstersek:
+      padding:20px;
+      veya padding ustten-alt,sag-sol olsun istersek
+      padding:20px 50px;
+      */
+      /* !!!! Burada biz contente 500px verip ayrıca paddıngler verirsek 
+      divimizin alanı büyürç Bu default olarak boyledir. yani cont=500 padding=20px toplam 520px. */
+      
+
+
+    }
+
+
+
+
+
+ </style>
   </head>
   <body>
     <header>
@@ -98,5 +223,33 @@
         <a href="#">Home</a>
       </header>
     </header>
+    <br>**************<br>
+    <div class="box-1">
+      <h3>divdivdiv</h3>
+    </div>
+    <br>*******<br>
+
+    <div id="box2">
+      <div id="box3"></div>
+    </div>
+    <br>**********<br>
+    <div id="box4">
+    </div>
+    <br>********<br>
+    <div class="box6 box7"></div>
+    <div class="box6 box8"></div>
+    <br>**************
+    <br>
+     <div class="box9">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, maiores.
+     </div>
+<br>*****************<br>
+     <div class="box10">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, dignissimos.     </div>
+<br>*****************<br>
+<div class="box11">
+  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, repellat.
+</div>
   </body>
+
 </html>
