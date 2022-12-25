@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
     <style>
         /* tum h1leri seçmek */
         /* h1{
@@ -41,11 +43,11 @@
             color: #fff;
             background-color: #a9a9a9;
         }
-        /* tym a etiketlerinin altındaki cızgılerı kaldırıyoruz */
+        /* tum a etiketlerinin altındaki cızgılerı kaldırıyoruz */
         a{
             text-decoration: none;
         }
-        /* bi ul işçindeki lilerin içindeki alara işlem yapıcaksak */
+        /* bi ul içindeki li'lerin içindeki a'lara işlem yapıcaksak */
         ul li a{
             background-color: tomato;
         }
@@ -94,6 +96,7 @@
       /* border: 5px red solid ; ile tek satırda verilebilir */
       /* ayrıca belirli kenarlara işlem yapılabilri: */
         border-left-color: yellow;
+        border-top-width: 2px;
 
     }
     /* divlere boyut verirken yüzdeli verirsek sabit bir pixeli olmaz */
@@ -135,13 +138,15 @@
 
     /* margin padding border */
     /* contetimiz yani içerigimiz ve borderımızı(cercevemizi) ogrendik. */
-    /* border ile contet arasındaki mesafeye padding diyoruz. Yani içerik ile çerçeve arasındaki mesafemız  */
-    /* border ile sayfa arasındaki mesafeye ise margin diyoruz. Yani çerçevenin dışındaki alan. Bu adlan diger elementlere olan mesafeyi gosterir */
+    /* bordercerceve ile contet arasındaki mesafeye padding diyoruz. Yani içerik ile çerçeve arasındaki mesafemız  */
+    /* border ile sayfa arasındaki mesafeye ise margin diyoruz. Yani çerçevenin dışındaki alan. Bu alan diger elementlere
+     olan mesafeyi gosterir */
     div.box9{
       margin: 0;
       padding: 0;
+      border: 3px solid red;
       /* margin left sol tarafla divimiz arasında bir boşluk bırakır */
-      margin-left: 30px;
+      margin-left: 30px;       /* çerçeve veya div ile sayfanın diger odelerının arasındaki mesafe margin */
       margin-right: 30px;
       margin-top: 30px;
       margin-bottom: 30px;
@@ -155,7 +160,8 @@
     div.box10{
       width: 50%;
       background: yellow;
-     margin-left: auto;
+      border: 1px solid blue;
+     margin-left: auto; 
      margin-right: auto;
      margin-top: 0;
      margin-bottom: 0;
@@ -169,8 +175,8 @@
       height: 200px;
       border: 5px solid black;
       /* padding left contet ile bborder arasına bir mesafebırakır */
-      padding-left: 20px;
-      padding-right: 20px;
+      padding-left: 20px;  
+      padding-right: 20px;       /*  çerçeve ile text arasındaki mesafeye denir */
       padding-top: 20px;
       padding-bottom: 20px;
       /* padding: top right bottom left  
@@ -181,12 +187,263 @@
       */
       /* !!!! Burada biz contente 500px verip ayrıca paddıngler verirsek 
       divimizin alanı büyürç Bu default olarak boyledir. yani cont=500 padding=20px toplam 520px. */
-      
+      box-sizing: border-box;
+    }
+    /* !! Eger ekledigimiz border ve padding degerlerinin boxın boyutuna eklenmemesini yani
+     box boyutunu degiştirmemesini istersek box sizing border-box; kullanmamız gerekiyor*/
+    div.box12{
+      width: 500px;
+      height: 200px;
+      border: 5px green solid;
+      padding: 10px;
+      box-sizing: border-box;
+      /* bu sayede istediğimiz kadar padding  verelim  box size ımız degişmez 500px X 200px kalır */
+      /* 185. satırda box11 e de borderbox verdigimizde görüyoruz ki iki box ın da boyutları eşit */
+    }
 
+    /* CSS TEXT */
+    /* burada baslıkların konumunu ayarlamak istersek : */
+    h1.heading1{
+      text-align: center;
+    }
+    h1.heading2{
+      text-align: right;
+    }
+    h1.heading3{
+      text-align: left;
 
     }
 
+    /* divler içine textalign uygularsak  ortalar*/
 
+    div.box13{
+      width: 400px;
+      height: 400px;
+      border: 3px solid red;
+      text-align: center;
+
+    }
+   
+    /* eger div.box13 içindeki p lerin
+     harflerinin arasındaki boşluğu ayarlamak istersek letter-spacing veririz */
+
+    div.box13 p{
+    letter-spacing: 3px;
+  }
+    /* pnin altındaki spane ozellık vermek textdeccoration ile, underline altı cizili,overline üstü çizili, linethroug üzeri cizili*/
+    div.box13 p span{
+      text-decoration: underline;
+    }
+
+    /* yzıların tamamını butuk veya kucuk harfe cevirmek için :text tranfsorm uppercase kullanırız */
+
+    div.box13 h1{
+     text-transform: capitalize;  /* sadece bas harfleri buyuk */
+      text-transform: uppercase; /* butun hepsi buyuk */
+      text-transform: lowercase; /* hepsi kucuk harf */
+    }
+
+
+    /* CSS FONTS */
+    /* genelde sans-serif kullanılır bu generic familiy, font famili ise ariel */
+    div.box14 h1{
+      font-family: Arial, Helvetica, sans-serif;
+      /* burada kullanılan cihazda arial yoksa helvetica o da yoksa sans-serif olarak deneyecek */
+      /* !! eger bizde olmayan bir fontu kullanmak istiyorsak fonts.google dan open sans 
+      fontunu yada benzeri fontları alabiliriz  */
+      /* linki 8. satıra ekledik ve asagıdaki gibi kulalnabilirizz*/
+      font-family: 'Open Sans', sans-serif;    
+    }
+    div.box14 p{
+      font-size: 16px;
+      line-height: 24px; /* satırlar arası mesafe */
+
+    }
+
+    /* CSS units  */
+
+    /* em= p elementimz 16px ve biz 2.5em verirsek 40pixele karsılık gelir */
+    /* rem= html in ana boyutu 16px ve biz 2.5rem dersek 40pxil olur */
+    /* vw sayfanın gorunen kısmının yüzde 1 ini alır */
+    /* %=divimizin yüzdesine göre ayarlanı */
+
+    div.box15 p{
+      font-size: 1.5rem;/* nurada htmlin basic olarak 16px 1.5 katı 24 oldu  */
+      line-height: 1.5em; /* burada satır bosluklarını otomatık olarak 24x1.5 yaptı */
+    }
+    div.box16{
+      font-size: 20px;
+      width: 400px;
+      height: 400px;
+      border: 3px red solid;
+
+    }
+
+    div.box16 span{
+      font-size: 75%; /*box16daki divimizin fontunun %75ini verdi yani 20px*0.75 */
+    }
+    div.box16 p{
+      font-style: italic;/* italic yzdı */
+      font-weight: bold;/* kalın yazdı */
+    }
+
+    /* CSS ICONS */
+    /* fontawesome ile ekleyebiliyoruz. Burada link vererek ikonları kullanabiliyoruz*/
+   /* ikonları i tagı ile ekliyoruz ve classı fontawesomedaki gibi yazıyoruz  */
+
+
+   /* Pseudo Class (State) */
+    /* burada pseuod linki nde hover efekti kullanamk için :hover veriyoruz  */
+   #pseudo{
+    font-size: 24px;
+   }
+   #pseudo:link{
+    /* uzerine tıklanmadıysa yeşil oldu */
+    color: green;
+   }
+   #pseudo:visited{
+    /* eger tıklandıysa rengi bu olsun diyorum */
+    color: black;
+  }
+   #pseudo:hover{
+    color: red;/* üzerine gelince rengi kırmızı oldu */
+  }
+ 
+  #pseudo:active{
+    color: blue;/* üzerine tıklarken yani mouse basılı durumdayken rengi blue oldu */
+  }
+  #pseudo2{
+    font-size: 1.5em;
+    padding: 10px;
+    border-radius: 4px;
+    border: 2px black solid;
+  }
+  #pseudo2:focus{/* tıklandıgında inputun focus olması olayı  */
+    
+  outline: 0;/* uzerine geldigimizdeki mavi olma basic ayarını sıfırladık */
+  border: 2px solid rebeccapurple;/* bu sayede uzerine tıklandıgında borderı mor olucak */
+  background: red;
+  }
+  
+  #facebook{
+    color: white;
+    font-size: 1.5em;
+    display: inline-block;/* inline ve block eleman yaptık width ve height verdik */
+    background: blue;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+
+  }
+  #facebook:hover {
+
+    background-color: white;
+    color: blue;
+    border: 1px solid black;
+
+  }
+
+/* css3schooldan butun pseudolara bakabiliriz */
+
+  /* PSEUDO ELEMENTLER */
+ 
+  #paragrafpseudo{
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    line-height: 1.5em;
+  }
+  #paragrafpseudo::first-line{
+    /* firstline ile ilk satırını seçiyoruz */
+    color: red;
+  }
+  #paragrafpseudo::first-letter{
+    color: blue;
+    font-size: 50px;
+  }
+  #paragrafpseudo::after{
+    content: "paragraf sonrası eklenen content";
+  }
+  #paragrafpseudo::before{
+    content: url("https://upload.wikimedia.org/wikipedia/tr/thumb/2/2e/Java_Logo.svg/1200px-Java_Logo.svg.png");
+  }
+
+  /* nth-child seelctor */
+  div.box17 p{
+    font-size: 1.5em;
+  }
+  
+  div.box17 p:first-child{
+    background-color: blue
+  }
+  div.box17 p:nth-child(1){
+    color: red;
+  }
+  
+  div.box17 p:nth-child(3){
+    color: green;
+  }
+  
+  div.box17 p:last-child{
+    background-color: purple;
+  }
+
+  /* eger nth childea çiftleri secmek istersek even, tekler için odd*/
+  
+  div.box17 p:nth-child(even){
+    background-color: aqua;
+  }
+
+  /* ayrıca nthchildda  an+bn ,n=0 , b=0 şeklindede kullanılabiliyor */
+  /* yani nth:child(2n) denilirse 2,4,6,8,10... cocuklar
+    nth:chilnd(2n+1) deilirse 1,3,5,7,9...
+    nth:child(n+4) derse 4. cocuktan itibaren olanları alır
+  */
+
+  /* TABLES */
+  div.box18 table.employess,tr,td,th{
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+  table.employess{
+    width: 50%;
+    margin: 0 auto;
+    font-size: 1.5em;
+    
+  }
+  th,td{
+    padding: 10px;
+
+  }
+  thead tr{
+    background-color: green;
+    color: white;
+  }
+  tbody tr{
+    text-align: center;
+  }
+  tbody tr:nth-child(even){
+    background: #f2f2f2;
+  }
+  tbody tr:hover{
+    background-color: yellow;
+  }
+/* OVERFLOW */
+  /* overflow taşma durumları */
+  /* overflow hidden da taşan kısım gözükmez
+  over flow auto da scroll gelir ve border içinde scrolla gzilir 
+  overflow scroll verirsek sıgsadad sıgmasada scroll verilir*/
+
+  div.box19{
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    background :#f2f2f2;
+    overflow: auto;
+  }
+
+
+  /* CSS POSİTİON */
 
 
 
@@ -225,31 +482,144 @@
     </header>
     <br>**************<br>
     <div class="box-1">
-      <h3>divdivdiv</h3>
+      <h3>divdivdiv class:box-1</h3>
     </div>
     <br>*******<br>
 
-    <div id="box2">
-      <div id="box3"></div>
+    <div id="box2">box2
+      <div id="box3">box3</div>
     </div>
     <br>**********<br>
-    <div id="box4">
+    <div id="box4">box4
     </div>
     <br>********<br>
-    <div class="box6 box7"></div>
-    <div class="box6 box8"></div>
+    <div class="box6 box7">box6 box7</div>
+    <div class="box6 box8">box6 box8</div>
     <br>**************
     <br>
-     <div class="box9">
+     <div class="box9">box9:
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, maiores.
      </div>
 <br>*****************<br>
-     <div class="box10">
+     <div class="box10">box10:
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, dignissimos.     </div>
 <br>*****************<br>
-<div class="box11">
+<div class="box11">box:11
   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, repellat.
 </div>
+<br>*****************<br>
+<div class="box12">box12 Lorem ipsum dolor sit amet.</div>
+
+<br>****************<br>
+
+  <h1 class="heading1">baslık1</h1>
+  <h1 class="heading2">baslık2</h1>
+  <h1 class="heading3">baslık3</h1>
+<br>*****************<br>
+<div class="box13">
+  <h1>box13 aricle1</h1>
+  <p>Lorem <span>ipsum</span> , dolor sit amet consectetur adipisicing elit. Harum, eum?</p>
+</div>
+<br>***************<br>
+
+<div class="box14">
+  <h1>b14baslık1</h1>
+  <p>box14Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt dolores quo distinctio unde accusantium voluptate. Dolor, eum. Accusamus, maxime?</p>
+
+</div>
+<br>*******************<br>
+
+<div class="box15">
+  <h1>box15baslık1</h1>
+  <p>box15 Lorem, ipsum dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, suscipit.</p>
+</div>
+<br>**************<br>
+<div class="box16">
+  <p>Lorem ipsum dolor sit amet <span>consectetur</span>  adipisicing elit. Hic esse molestias ut repellendus eum vero!</p>
+</div>
+<br>**********************<br>
+
+<i class="fas fa-search"></i>
+<!-- ikon eklerken i etiketi kullanıyoruz classı fontawesomedan kulllanmak istediğimiz ikona göre seçiyoruz -->
+<i class="fas fa-compass" ></i>
+<i class="fa-brands fa-searchengin"></i>
+<br>*************<br>
+
+<a href="#" id="pseudo">This is a link</a>
+<input type="text" id="pseudo2" placeholder="isim giriniz">
+<br>*************<br>
+<a href="#" id="facebook">facebook</a>
+<br>****************<br>
+
+<p id="paragrafpseudo">
+  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium doloribus esse quidem quia velit ipsa neque totam, blanditiis exercitationem dolores molestiae suscipit deserunt debitis repellendus perspiciatis, rerum optio magni sed est corrupti, quod dolore sunt obcaecati! Hic est, quae laudantium quibusdam impedit nam maxime accusantium voluptatibus praesentium esse aliquid amet repellat deleniti voluptatem placeat deserunt necessitatibus quaerat. Necessitatibus commodi assumenda vitae dignissimos aut nemo pariatur fugit similique perspiciatis? Architecto obcaecati, quam perspiciatis rerum natus et? Perferendis corporis dolor obcaecati placeat doloremque doloribus illo nesciunt perspiciatis deserunt voluptatum, praesentium blanditiis voluptates quis a voluptatem dolore error at reiciendis est in ipsa.
+</p>
+<br>***************************<br>
+
+<div class="box17">
+  <p>box17Lorem ipsum dolor sit amet consectetur.</p>
+  <p>box17Lorem ipsum dolor sit amet consectetur.</p>
+  <p>box17Lorem ipsum dolor sit amet consectetur.</p>
+  <p>box17Lorem ipsum dolor sit amet consectetur.</p>
+  <p>box17Lorem ipsum dolor sit amet consectetur.</p>
+</div>
+
+<br>*************************************<br>
+
+<div class="box18">
+  <table class="employess">
+    <thead>
+      <tr>
+        <th>ad</th>
+        <th>departman</th>
+        <th>maaş</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>oktay</td>
+        <td>bilişim</td>
+        <td>4000</td>
+      </tr>
+      
+      <tr>
+        <td>oktay</td>
+        <td>bilişim</td>
+        <td>4000</td>
+      </tr>
+      
+      <tr>
+        <td>oktay</td>
+        <td>bilişim</td>
+        <td>4000</td>
+      </tr>
+      
+      <tr>
+        <td>oktay</td>
+        <td>bilişim</td>
+        <td>4000</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<br>***************************************<br>
+
+<div class="box19">
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa perferendis odit debitis eos voluptates rerum, neque nesciunt facilis sit dolor quas, voluptatibus autem voluptatum animi ducimus impedit officiis. Alias accusantium eius repellendus incidunt neque ut rerum esse vel fugit possimus. Officiis mollitia nisi harum ipsum quisquam. Laboriosam, quam cupiditate! Laudantium?.Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat laudantium esse nihil, nemo ullam nam omnis saepe tenetur inventore dolorum, quasi dolor quae corporis ut incidunt optio neque aut numquam officiis asperiores. Quisquam harum repellat labore culpa laboriosam assumenda minus, accusantium sunt non nobis facilis voluptate eaque reprehenderit aliquid. Consectetur.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
   </body>
 
 </html>
