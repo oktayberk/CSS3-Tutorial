@@ -514,6 +514,41 @@ div.box23 img {
   float: left;
 }
 
+/* !!!!!!!!!!!!!!!!! FLEX CONTAİNER !!!!!!!!!! */
+
+.container1{
+  /* normalde * içine verilen ozellıkler */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+/* container içine verilen ozellıkler */
+
+  width: 75%; /*  container widthi*/
+  margin: 0 auto;/* sayfayı ortalaması için */
+  display: flex; /* display flex ozellıgı */
+  flex-direction: row; /* boxların sıralanması için kullanılır column verirsek alt alta sıralanır */
+ /* yatayda sıralamak için justifycont kullanıyoruz */
+ justify-content:flex-start ;/* sagdan baslar */
+/* justify-content: flex-end;  soldan baslar */
+/* justify-content: center;     tam ortaya sıralayabilir */
+/* justify-content: space-between;  orta sola ve saga yaslar */
+/* justify-content: space-around;  2/1 boslıklarla yapar */
+/* justify-content: space-evenly;   heryere eşit boşluk */
+
+  height: 600px; /* yüksekliği */
+  background-color: black; /*arka planı  */
+  
+}
+.box24{
+  text-align: center;
+  background: #f2f2f2;
+  width: 200px;
+  border: 1px solid red;
+
+}
+
+
 
 
  </style>
@@ -709,8 +744,23 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, dignissimos.   
   <p>box23 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius numquam quam iure sequi culpa. Repudiandae totam impedit, alias repellendus odit quas doloribus sit ducimus optio nostrum laborum, distinctio ab voluptate sunt cum quasi. Dolore, dolor. Sed nesciunt ab iure maiores eius qui similique esse asperiores consequatur ducimus voluptatibus dolore earum cupiditate iusto alias dicta saepe, reprehenderit ea voluptas perspiciatis veniam laborum animi vitae. Aspernatur, fugiat earum debitis reprehenderit dolores officiis ab animi laudantium expedita minima recusandae numquam, quos quod tenetur excepturi. Quo at nulla consequatur impedit, recusandae perferendis cum, modi soluta unde aliquid, nemo a asperiores est! Reiciendis, nam odio!</p>
 
 </div>
+<br><br><br><br>
+<br>******************************************<br><br>
 
-
+<div class="container1">
+  <div class="box24">
+    <h1>Article1</h1>
+    <p>b24Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div class="box24">
+    <h1>Article1</h1>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>  
+  <div class="box24">
+    <h1>Article1</h1>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+</div>
 
 
 
