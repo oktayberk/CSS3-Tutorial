@@ -21,6 +21,7 @@
         h1,p {
             color: yellow;
             background-color: black;
+
         }
         /* id ye göre secmek */
         #logo{
@@ -60,12 +61,12 @@
             /* eger important etiketi eklersek bunun rengi altta değişmez */
         }
 
-        /* htmldeki bütün etikerleri seçmek için */
+        /* htmldeki bütün etiketleri seçmek için */
         *{
             font-size: 20px;
         }
 
-        /* dive background image atamadk için */
+        /* dive background image atamak için */
       .box-1{
         color: red;
         background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Ataturk1930s.jpg/220px-Ataturk1930s.jpg");
@@ -74,10 +75,11 @@
         height: 360px;
       }
       /* butun bodye arkaplan yapmak istersek */
+      /* arka plan resmi özellikleri background-image propeties */
       body{
         background-image: url("https://upload.wikimedia.org/wikipedia/tr/thumb/2/2e/Java_Logo.svg/1200px-Java_Logo.svg.png");
         background-size: 50px;
-        background-repeat: no-repeat;        /*resmin tekrarlanammasını saglar  */
+        background-repeat: no-repeat;        /*resmin tekrarlanmamasını saglar  */
         background-position: right top;        /* resmi saga ve üste ekler */
         background-attachment: fixed;        /* scrolla asagı ındıgımızde resmin sabit kalmasını saglıyor */
         /* ayrıca tek ssatırdada bu ozellıklerı verebiliriz: */
@@ -216,6 +218,7 @@
     /* divler içine textalign uygularsak  ortalar*/
 
     div.box13{
+      margin: auto; /*divi ortalaması için yazdım goruntu acısından  */
       width: 400px;
       height: 400px;
       border: 3px solid red;
@@ -234,7 +237,7 @@
       text-decoration: underline;
     }
 
-    /* yzıların tamamını butuk veya kucuk harfe cevirmek için :text tranfsorm uppercase kullanırız */
+    /* yazıların tamamını butuk veya kucuk harfe cevirmek için :text tranfsorm uppercase kullanırız */
 
     div.box13 h1{
      text-transform: capitalize;  /* sadece bas harfleri buyuk */
@@ -245,6 +248,7 @@
 
     /* CSS FONTS */
     /* genelde sans-serif kullanılır bu generic familiy, font famili ise ariel */
+
     div.box14 h1{
       font-family: Arial, Helvetica, sans-serif;
       /* burada kullanılan cihazda arial yoksa helvetica o da yoksa sans-serif olarak deneyecek */
@@ -256,7 +260,6 @@
     div.box14 p{
       font-size: 16px;
       line-height: 24px; /* satırlar arası mesafe */
-
     }
 
     /* CSS units  */
