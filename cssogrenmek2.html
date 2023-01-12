@@ -446,6 +446,7 @@
 
 
   /* CSS POSİTİON */
+  /*dakika:  4.47 */
 /* position fixed ile bir header veya navbarı yukarıvb sabitlemek itiyorsak fixed 
 kullanıyoruz. bu sayede scroll asagı ınsede sabit kalıyor. Java pngsi gibi */
 /* left 0 dedigimizde sola yapışıyor,right0 dedeigimizde saga , aynı zamanda top ve bottom
@@ -531,13 +532,21 @@ div.box23 img {
   display: flex; /* display flex ozellıgı */
   flex-direction: row; /* boxların sıralanması için kullanılır column verirsek alt alta sıralanır */
  /* yatayda sıralamak için justifycont kullanıyoruz */
- justify-content:flex-start ;/* sagdan baslar */
-/* justify-content: flex-end;  soldan baslar */
+ justify-content:flex-start ;/* soldan baslar */
+/* justify-content: flex-end;  sağdan baslar */
 /* justify-content: center;     tam ortaya sıralayabilir */
-/* justify-content: space-between;  orta sola ve saga yaslar */
+/* justify-content: space-between;  orta sola ve saga yaslar */ 
 /* justify-content: space-around;  2/1 boslıklarla yapar */
 /* justify-content: space-evenly;   heryere eşit boşluk */
 
+  align-items: center;/* box ve divleri ortalar */
+  /* align-items: flex-start; yukarıdan baslar */
+  /* align-items: flex-end; aşagıdan baslatır */
+  /* align-items: stretch;  tum ekranı kaplar */
+  /* align-items: baseline;  tek bir çizgiye göre hizaalr */
+
+
+  
   height: 600px; /* yüksekliği */
   background-color: black; /*arka planı  */
   
@@ -756,11 +765,11 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, dignissimos.   
   </div>
   <div class="box24">
     <h1>Article1</h1>
-    <p>Lorem ipsum dolor sit amet.</p>
+    <p>b24Lorem ipsum dolor sit amet.</p>
   </div>  
   <div class="box24">
     <h1>Article1</h1>
-    <p>Lorem ipsum dolor sit amet.</p>
+    <p>b24Lorem ipsum dolor sit amet.</p>
   </div>
 </div>
 
