@@ -549,11 +549,6 @@ div.box23 img {
   /* align-items: stretch;  tum ekranı kaplar */
   /* align-items: baseline;  tek bir çizgiye göre hizaalr */
 
-/* dk saat 5.30 */
-
-
-
-
 
   height: 600px; /* yüksekliği */
   background-color: black; /*arka planı  */
@@ -566,6 +561,230 @@ div.box23 img {
   border: 1px solid red;
 
 }
+
+/* *************** */
+/* FLEX-WRAP  */
+/* flex wrap ozellıgı default olarak boxların yan yana devam etmesini fakat content boyularının
+küçülmesine neden oluyor */
+
+
+.container2{
+  /* normalde * içine verilen ozellıkler */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+/* container içine verilen ozellıkler */
+
+  width: 75%; /*  container widthi*/
+  margin: 0 auto;/* sayfayı ortalaması için */
+  display: flex; /* display flex ozellıgı */ 
+  justify-content:flex-start ;/* soldan baslar */
+
+  min-height: 600px; /* yüksekliği */
+  background-color: black; /*arka planı  */
+
+  flex-wrap: wrap;  /* Bu sayede sıgmayan box alt satıra geçiyor
+  eger bu satırdaki yer de biterse ondan sonraki satıra geçer 
+  !!fakat bu durumda satır taşma yapar. Bu taşmayı onlemek için
+  height ı min-heigth vermemiz gerekir  */
+  /* flex-wrap: nowrap; hepsini bir satıra sıgdırmak */
+  
+}
+.box25{
+  text-align: center;
+  background: #f2f2f2;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  margin: 10px;
+}
+
+/* EGER FLEX-DİRECTİON=COLUMN yaparsak  */
+/* burada justify content ve align items ters işlem görür */
+
+.container3{
+  /* normalde * içine verilen ozellıkler */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+/* container içine verilen ozellıkler */
+
+  width: 75%; /*  container widthi*/
+  margin: 0 auto;/* sayfayı ortalaması için */
+  display: flex; /* display flex ozellıgı */
+  flex-direction: column; /* boxların sıralanması için kullanılır column verirsek alt alta sıralanır */
+ 
+ 
+  /* flex direction column oldugu için dikeyde sıralamak için justifycont kullanıyoruz */
+ justify-content:flex-start ;/* yukarıdan baslar */
+/* justify-content: flex-end;  asagıdan baslar */
+/* justify-content: center;     tam ortaya sıralayabilir */
+/* justify-content: space-between;  orta yuarı ve asagıyua tam yaslar */ 
+/* justify-content: space-around;  dikeyde 2/1 boslıklarla yapar */
+/* justify-content: space-evenly;  dikeyde heryere eşit boşluk */
+
+
+/* column odlugu için bu sefer bu ozellıkler yatayda sıralama için alignitems kullanıyoruz */
+  align-items: center;/* box ve divleri yataydaortalar */
+  /* align-items: flex-start; soldan baslar */
+  /* align-items: flex-end; sağdan baslatır */
+  /* align-items: stretch;  tum ekranı kaplar */
+  /* align-items: baseline;  tek bir çizgiye göre hizaalr */
+
+
+  height: 600px; /* yüksekliği */
+  background-color: black; /*arka planı  */
+  
+}
+.box26{
+  text-align: center;
+  background: #f2f2f2;
+  width: 200px;
+  border: 1px solid red;
+}
+
+/*  ************************/
+/* ORDER VEREREK SIRA DEĞİŞTİRME */
+/* ALİGN SELF İLE BELİRLİ BİR BOX CLASSA A KONUM VERME */
+/* FLEX GROW ile sayfayı boleriz. ornegin 3 6 4 verirsek 13 parcaya bolerız ona gore konumlanır */
+/* !! EGER SADECE 1 boxa flex-grow:1 verirsek o box kalan boşlukları kaplar
+eger iki boxa birden flex:1 verirsek iki box birden boslukları kaplar */
+
+.container4{
+  /* normalde * içine verilen ozellıkler */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+/* container içine verilen ozellıkler */
+
+  width: 75%; /*  container widthi*/
+  margin: 0 auto;/* sayfayı ortalaması için */
+  display: flex; /* display flex ozellıgı */
+  flex-direction: row; /* boxların sıralanması için kullanılır column verirsek alt alta sıralanır */ 
+  justify-content:space-around ;
+  align-items: center;
+  height: 600px; /* yüksekliği */
+  background-color: black; /*arka planı  */
+  
+}
+.box27{
+  text-align: center;
+  background: #f2f2f2;
+  width: 200px;
+  border: 1px solid red;
+
+}
+.box27-1{
+  /* order 3 diyerek 3. sıraya alırız */
+  order: 3;
+  background: red;
+  flex-grow: 2;
+}
+.box27-2{
+  order: 1;
+  background: blue;
+  flex-grow: 1;
+}
+.box27-3{
+  order: 2;
+  background: green;
+  align-self: flex-end; /* alignself ile bu boxa ozel align verebiliriz  */
+  flex-grow: 3; /* sayfayı verilen butun flexgrowların toplamına boler ve 3/6 şeklinde kaplar  */
+}
+
+
+/* **************************** */
+
+/* RESPONSİVE TASARIMLAR */
+/* responsive tsaarımların amacı telfon tablet ve bilgisayarda px e göre boyutları ve 
+sayfa düzenini ayarlamak istiyoruz */
+/* Tablet için 769 px e kadar olan kısım daha da buyudugunde ise bilgisayar için olan 
+kısım aktif olacak */
+
+
+/* burada box28 adında bır div olusturdukbackraundu kırmızı verdik */
+.box28{
+  display: inline-block;
+  height:200px ;
+  width: 200px;
+  background-color: red;
+}
+/* ardından media eklentisi ile widthi 768px i geçene kadar bu ozellık etkin olsun dedik.
+yani 768px e kadar mavi, 768 px i geçtiginde kırmızı olucak */
+@media(max-width:768px){
+  .box28{
+    background-color: blue;
+  }
+}
+
+/* telefon için yazmak istersek */
+/* bu durumda 769px in altına inerse yeşile doner */
+@media(max-width:500px){
+  .box28{
+    background-color: green;
+  }
+}
+
+/* ***************************** */
+/* eger bir elementin pc ekranın gozukup tablet ekranında gozukmemesini istiyorsa */
+
+.box29{
+  /* display none ozellıgı gozukemmesini saglıyor */
+  display: none;
+}
+
+/* bu sayede minimum 768px e kadar display ozellıgı normal olarak gozukuyor. Ardından
+769px uzerıne altına indiginde display none oluyor ve yazı kayboluyor. Yani minwidth dediğimiz
+minimum768px e kadar olan durumda bu ozellık uygulansın demek oluyor */
+@media(min-width:768px){
+  .box29{
+    display: block;
+  }
+}
+
+
+/* ********************************************* */
+
+.container5{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box30{
+  border: 1px solid red;
+  background: #a7a7a7;
+  padding: 10px;
+  width: 25%;
+}
+/* burada görüldüğü gibi ekran kuculdugude yazılar zor okunuyor bunun için tablet ve telefonda 
+kullanılacak bir mediaq yazıyorum */
+/* tablet */
+@media(max-width:768px){
+  .box30{
+    width: 50%;
+    /* boyutu yuzde50 ye cıktı */
+  }
+}
+/* telefon */
+@media(max-width:500px){
+  .box30{
+    width: 100%;
+    /* boyutu yuzde yuze cıktı */
+  }
+}
+
+/* *********************************************** */
+/* 6.20 de bitti ... son .... */
+
 
 
 
@@ -780,6 +999,116 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, dignissimos.   
     <p>b24Lorem ipsum dolor sit amet.</p>
   </div>
 </div>
+
+<br>******************************************<br><br>
+
+<div class="container2">
+  <div class="box25">
+    <h1>Article1</h1>
+    <p>b25Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div class="box25">
+    <h1>Article1</h1>
+    <p>b25Lorem ipsum dolor sit amet.</p>
+  </div>  
+  <div class="box25">
+    <h1>Article1</h1>
+    <p>b25Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div class="box25">
+    <h1>Article1</h1>
+    <p>b25Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div class="box25">
+    <h1>Article1</h1>
+    <p>b25Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div class="box25">
+    <h1>Article1</h1>
+    <p>b25Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div class="box25">
+    <h1>Article1</h1>
+    <p>b25Lorem ipsum dolor sit amet.</p>
+  </div>
+  <br>
+  <br>
+ 
+
+</div>
+ <br>****************************************<br><br>
+<!-- flex-direction=column için -->
+ <div class="container3">
+  <div class="box26">
+    <h1>Article1</h1>
+    <p>b26Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div class="box26">
+    <h1>Article1</h1>
+    <p>b26Lorem ipsum dolor sit amet.</p>
+  </div>  
+  <div class="box26">
+    <h1>Article1</h1>
+    <p>b26Lorem ipsum dolor sit amet.</p>
+  </div>
+</div>
+<br>*****************************************<br>
+
+
+<div class="container4">
+  <div class="box27 box27-1">
+    <h1>Article1</h1>
+    <p>b27-1Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div class="box27 box27-2">
+    <h1>Article1</h1>
+    <p>b27-2Lorem ipsum dolor sit amet.</p>
+  </div>  
+  <div class="box27 box27-3">
+    <h1>Article1</h1>
+    <p>b27-3Lorem ipsum dolor sit amet.</p>
+  </div>
+</div>
+
+<br>***********************************<br><br>
+
+<div class="box28"></div>
+
+<br>***********************************<br><br>
+
+<div class="box29">
+  <p>box29Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, illum.</p>
+</div>
+
+<br>****************************************************<br><br>
+
+<div class="container5">
+  <div class="box30">
+    <h1>article1</h1>
+    <p>box30Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, molestias.</p>
+  </div>
+  <div class="box30">
+    <h1>article1</h1>
+    <p>box30Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, molestias.</p>
+  </div>
+  <div class="box30">
+    <h1>article1</h1>
+    <p>box30Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, molestias.</p>
+  </div>
+  <div class="box30">
+    <h1>article1</h1>
+    <p>box30Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, molestias.</p>
+  </div>
+</div>
+
+<br>**************************************<br><br>
+
+
+
+
+
+
+
 
 
 
