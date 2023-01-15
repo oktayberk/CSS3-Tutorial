@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+    <style>
+        /* tum h1leri seçmek */
+        /* h1{
+            color: red;
+            background-color: blue;
+        } 
+        p{ 
+            color: green;
+            background-color: aqua;
+        } */
+        /* ikisini aynı anda secmek */
+        h1,p {
+            color: yellow;
+            background-color: black;
+
+        }
+        /* id ye göre secmek */
+        #logo{
+            color: red;
+            background-color: blue;
+        }
+        /* info classındakiler */
+        .info{
+            color: aqua;
+            background-color: brown;
+        }
+        /* idsi logo ve classı info olanalr */
+        #logo, .info{
+            color: skyblue;
+            background-color: purple;
+        }
+        /* hem idsi para1 hem classı lead olan yani buradaki tek p seçilir */
+        #para1.lead{
+            color: #fff;
+            background-color: #a9a9a9;
+        }
+        /* tum a etiketlerinin altındaki cızgılerı kaldırıyoruz */
+        a{
+            text-decoration: none;
+        }
+        /* bi ul içindeki li'lerin içindeki a'lara işlem yapıcaksak */
+        ul li a{
+            background-color: tomato;
+        }
+        /* classı info olanların altındaki spanlari cek */
+        .info span{
+            color:black;
+        }
+        /* ayrica info classındaki spanin primary classını secersek */
+        .info .primary{
+            color: red !important;
+            /* eger important etiketi eklersek bunun rengi altta değişmez */
+        }
+
+        /* htmldeki bütün etiketleri seçmek için */
+        *{
+            font-size: 20px;
+        }
+
+        /* dive background image atamak için */
+      .box-1{
+        color: red;
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Ataturk1930s.jpg/220px-Ataturk1930s.jpg");
+        background-size: cover;        /*  cobver resmin tam larakkaplamnasını saglıyor*/
+        width: 640px;
+        height: 360px;
+      }
+      /* butun bodye arkaplan yapmak istersek */
+      /* arka plan resmi özellikleri background-image propeties */
+      body{
+        background-image: url("https://upload.wikimedia.org/wikipedia/tr/thumb/2/2e/Java_Logo.svg/1200px-Java_Logo.svg.png");
+        background-size: 50px;
+        background-repeat: no-repeat;        /*resmin tekrarlanmamasını saglar  */
+        background-position: right top;        /* resmi saga ve üste ekler */
+        background-attachment: fixed;        /* scrolla asagı ındıgımızde resmin sabit kalmasını saglıyor */
+        /* ayrıca tek ssatırdada bu ozellıklerı verebiliriz: */
+        /* background: url("https://upload.wikimedia.org/wikipedia/tr/thumb/2/2e/Java_Logo.svg/1200px-Java_Logo.svg.png") no-repeat center center fixed; */
+      }
+
+      /* border ve radius */
+      .box-1{
+        /* width kalınlık,style solif sabit olmas,color rengi, radius köşelerin düzeltilmesi */
+        border-width: 5px;
+        border-color: red;
+        border-style: solid;
+        /* border radius heiıght ve width kadar verirsek yuvarlak olur örn:wei:50px width:50px border:50px */
+        border-radius: 10px;
+      /* border: 5px red solid ; ile tek satırda verilebilir */
+      /* ayrıca belirli kenarlara işlem yapılabilri: */
+        border-left-color: yellow;
+        border-top-width: 2px;
+
+    }
+    /* divlere boyut verirken yüzdeli verirsek sabit bir pixeli olmaz */
+    div#box2{
+
+      width: 50%;
+      height: 100px;
+      background: #a7a7a7;;
+    }
+    /* burada box3 box 2 nin içindeki bir div oldugu için onun yuzde 50sini alır */
+    div#box3{
+
+      width: 50%;
+      height: 50%;
+      background: red;
+    }
+
+    /* maxwidth ile pixel en fazla 500px e cıkabilir. sonrasında artmaz  */
+    div#box4{
+      background: blue;
+      max-width: 500px;
+      height: 100px;
+    }
+
+    /* box 6 ve 7-8 de display ozellıgı */
+    /* normalde inline elemanlara witdh ve height veremiyoruz. Burada biz inlineblock ile witdh ve heigt verebilir ve inline gibi kullanabiliriz */
+    /* inline block elementlere witdh ve height verebilriiriz ve bu durumda inline kadar yer kapalr */
+    .box6{
+      width: 50%;
+      height: 100px;
+      display: inline-block;
+    }
+    .box7{
+      background-color: purple;
+    }
+    .box8{
+      background-color: peru;
+    }
+
+    /* margin padding border */
+    /* contetimiz yani içerigimiz ve borderımızı(cercevemizi) ogrendik. */
+    /* bordercerceve ile contet arasındaki mesafeye padding diyoruz. Yani içerik ile çerçeve arasındaki mesafemız  */
+    /* border ile sayfa arasındaki mesafeye ise margin diyoruz. Yani çerçevenin dışındaki alan. Bu alan diger elementlere
+     olan mesafeyi gosterir */
+    div.box9{
+      margin: 0;
+      padding: 0;
+      border: 3px solid red;
+      /* margin left sol tarafla divimiz arasında bir boşluk bırakır */
+      margin-left: 30px;       /* çerçeve veya div ile sayfanın diger odelerının arasındaki mesafe margin */
+      margin-right: 30px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      /* margini tek satırda vermek istersek :
+      top right bottom left şeklinde veririz */
+      margin: 35px 20px 35px 20px;
+      /* veya top-bottom, rightleft olarak verilebilir */
+      margin: 33px 22px;
+    }
+    /* marginin ortalanması */
+    div.box10{
+      width: 50%;
+      background: yellow;
+      border: 1px solid blue;
+     margin-left: auto; 
+     margin-right: auto;
+     margin-top: 0;
+     margin-bottom: 0;
+     /* margin: 0 auto; da yazabiliriz */
+    }
+
+    /* padding ozellıkleri */
+    div.box11{
+      /* width ve height verdigimizde sadece content alanına veriyoruz.*/
+      width: 500px;
+      height: 200px;
+      border: 5px solid black;
+      /* padding left contet ile bborder arasına bir mesafebırakır */
+      padding-left: 20px;  
+      padding-right: 20px;       /*  çerçeve ile text arasındaki mesafeye denir */
+      padding-top: 20px;
+      padding-bottom: 20px;
+      /* padding: top right bottom left  
+      veya her yer aynı olsun ıstersek:
+      padding:20px;
+      veya padding ustten-alt,sag-sol olsun istersek
+      padding:20px 50px;
+      */
+      /* !!!! Burada biz contente 500px verip ayrıca paddıngler verirsek 
+      divimizin alanı büyürç Bu default olarak boyledir. yani cont=500 padding=20px toplam 520px. */
+      box-sizing: border-box;
+    }
+    /* !! Eger ekledigimiz border ve padding degerlerinin boxın boyutuna eklenmemesini yani
+     box boyutunu degiştirmemesini istersek box sizing border-box; kullanmamız gerekiyor*/
+    div.box12{
+      width: 500px;
+      height: 200px;
+      border: 5px green solid;
+      padding: 10px;
+      box-sizing: border-box;
+      /* bu sayede istediğimiz kadar padding  verelim  box size ımız degişmez 500px X 200px kalır */
+      /* 185. satırda box11 e de borderbox verdigimizde görüyoruz ki iki box ın da boyutları eşit */
+    }
+
+    /* CSS TEXT */
+    /* burada baslıkların konumunu ayarlamak istersek : */
+    h1.heading1{
+      text-align: center;
+    }
+    h1.heading2{
+      text-align: right;
+    }
+    h1.heading3{
+      text-align: left;
+
+    }
+
+    /* divler içine textalign uygularsak  ortalar*/
+
+    div.box13{
+      margin: auto; /*divi ortalaması için yazdım goruntu acısından  */
+      width: 400px;
+      height: 400px;
+      border: 3px solid red;
+      text-align: center;
+
+    }
+   
+    /* eger div.box13 içindeki p lerin
+     harflerinin arasındaki boşluğu ayarlamak istersek letter-spacing veririz */
+
+    div.box13 p{
+    letter-spacing: 3px;
+  }
+    /* pnin altındaki spane ozellık vermek textdeccoration ile, underline altı cizili,overline üstü çizili, linethroug üzeri cizili*/
+    div.box13 p span{
+      text-decoration: underline;
+    }
+
+    /* yazıların tamamını butuk veya kucuk harfe cevirmek için :text tranfsorm uppercase kullanırız */
+
+    div.box13 h1{
+     text-transform: capitalize;  /* sadece bas harfleri buyuk */
+      text-transform: uppercase; /* butun hepsi buyuk */
+      text-transform: lowercase; /* hepsi kucuk harf */
+    }
+
+
+    /* CSS FONTS */
+    /* genelde sans-serif kullanılır bu generic familiy, font famili ise ariel */
+
+    div.box14 h1{
+      font-family: Arial, Helvetica, sans-serif;
+      /* burada kullanılan cihazda arial yoksa helvetica o da yoksa sans-serif olarak deneyecek */
+      /* !! eger bizde olmayan bir fontu kullanmak istiyorsak fonts.google dan open sans 
+      fontunu yada benzeri fontları alabiliriz  */
+      /* linki 8. satıra ekledik ve asagıdaki gibi kulalnabilirizz*/
+      font-family: 'Open Sans', sans-serif;    
+    }
+    div.box14 p{
+      font-size: 16px;
+      line-height: 24px; /* satırlar arası mesafe */
+    }
+
+    /* CSS units  */
+
+    /* em= p elementimz 16px ve biz 2.5em verirsek 40pixele karsılık gelir */
+    /* rem= html in ana boyutu 16px ve biz 2.5rem dersek 40pxil olur */
+    /* vw sayfanın gorunen kısmının yüzde 1 ini alır */
+    /* %=divimizin yüzdesine göre ayarlanı */
+
+    div.box15 p{
+      font-size: 1.5rem;/* nurada htmlin basic olarak 16px 1.5 katı 24 oldu  */
+      line-height: 1.5em; /* burada satır bosluklarını otomatık olarak 24x1.5 yaptı */
+    }
+    div.box16{
+      font-size: 20px;
+      width: 400px;
+      height: 400px;
+      border: 3px red solid;
+
+    }
+
+    div.box16 span{
+      font-size: 75%; /*box16daki divimizin fontunun %75ini verdi yani 20px*0.75 */
+    }
+    div.box16 p{
+      font-style: italic;/* italic yzdı */
+      font-weight: bold;/* kalın yazdı */
+    }
+
+    /* CSS ICONS */
+    /* fontawesome ile ekleyebiliyoruz. Burada link vererek ikonları kullanabiliyoruz*/
+   /* ikonları i tagı ile ekliyoruz ve classı fontawesomedaki gibi yazıyoruz  */
+
+
+   /* Pseudo Class (State) */
+    /* burada pseuod linki nde hover efekti kullanamk için :hover veriyoruz  */
+   #pseudo{
+    font-size: 24px;
+   }
+   #pseudo:link{
+    /* uzerine tıklanmadıysa yeşil oldu */
+    color: green;
+   }
+   #pseudo:visited{
+    /* eger tıklandıysa rengi bu olsun diyorum */
+    color: black;
+  }
+   #pseudo:hover{
+    color: red;/* üzerine gelince rengi kırmızı oldu */
+  }
+ 
+  #pseudo:active{
+    color: blue;/* üzerine tıklarken yani mouse basılı durumdayken rengi blue oldu */
+  }
+  #pseudo2{
+    font-size: 1.5em;
+    padding: 10px;
+    border-radius: 4px;
+    border: 2px black solid;
+  }
+  #pseudo2:focus{/* tıklandıgında inputun focus olması olayı  */
+    
+  outline: 0;/* uzerine geldigimizdeki mavi olma basic ayarını sıfırladık */
+  border: 2px solid rebeccapurple;/* bu sayede uzerine tıklandıgında borderı mor olucak */
+  background: red;
+  }
+  
+  #facebook{
+    color: white;
+    font-size: 1.5em;
+    display: inline-block;/* inline ve block eleman yaptık width ve height verdik */
+    background: blue;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+
+  }
+  #facebook:hover {
+
+    background-color: white;
+    color: blue;
+    border: 1px solid black;
+
+  }
+
+/* css3schooldan butun pseudolara bakabiliriz */
+
+  /* PSEUDO ELEMENTLER */
+ 
+  #paragrafpseudo{
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    line-height: 1.5em;
+  }
+  #paragrafpseudo::first-line{
+    /* firstline ile ilk satırını seçiyoruz */
+    color: red;
+  }
+  #paragrafpseudo::first-letter{
+    color: blue;
+    font-size: 50px;
+  }
+  #paragrafpseudo::after{
+    content: "paragraf sonrası eklenen content";
+  }
+  #paragrafpseudo::before{
+    content: url("https://upload.wikimedia.org/wikipedia/tr/thumb/2/2e/Java_Logo.svg/1200px-Java_Logo.svg.png");
+  }
+
+  /* nth-child seelctor */
+  div.box17 p{
+    font-size: 1.5em;
+  }
+  
+  div.box17 p:first-child{
+    background-color: blue
+  }
+  div.box17 p:nth-child(1){
+    color: red;
+  }
+  
+  div.box17 p:nth-child(3){
+    color: green;
+  }
+  
+  div.box17 p:last-child{
+    background-color: purple;
+  }
+
+  /* eger nth childea çiftleri secmek istersek even, tekler için odd*/
+  
+  div.box17 p:nth-child(even){
+    background-color: aqua;
+  }
+
+  /* ayrıca nthchildda  an+bn ,n=0 , b=0 şeklindede kullanılabiliyor */
+  /* yani nth:child(2n) denilirse 2,4,6,8,10... cocuklar
+    nth:chilnd(2n+1) deilirse 1,3,5,7,9...
+    nth:child(n+4) derse 4. cocuktan itibaren olanları alır
+  */
+
+  /* TABLES */
+  div.box18 table.employess,tr,td,th{
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+  table.employess{
+    width: 50%;
+    margin: 0 auto;
+    font-size: 1.5em;
+    
+  }
+  th,td{
+    padding: 10px;
+
+  }
+  thead tr{
+    background-color: green;
+    color: white;
+  }
+  tbody tr{
+    text-align: center;
+  }
+  tbody tr:nth-child(even){
+    background: #f2f2f2;
+  }
+  tbody tr:hover{
+    background-color: yellow;
+  }
+/* OVERFLOW */
+  /* overflow taşma durumları */
+  /* overflow hidden da taşan kısım gözükmez
+  over flow auto da scroll gelir ve border içinde scrolla gzilir 
+  overflow scroll verirsek sıgsadad sıgmasada scroll verilir*/
+
+  div.box19{
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    background :#f2f2f2;
+    overflow: auto;
+  }
+
+
+  /* CSS POSİTİON */
+  /*dakika:  4.47 */
+/* position fixed ile bir header veya navbarı yukarıvb sabitlemek itiyorsak fixed 
+kullanıyoruz. bu sayede scroll asagı ınsede sabit kalıyor. Java pngsi gibi */
+/* left 0 dedigimizde sola yapışıyor,right0 dedeigimizde saga , aynı zamanda top ve bottom
+0 dersek oraya yapışır.Ayrıca right 20px dersek sagdan 20px uzakta durur */
+  div.box20{
+    width: 50%;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border: 1px solid red;
+    position: fixed;
+    left: 0;
+  }
+/*Relative --   */
+ /*relative de bulundugu yerden saga ve sola kayıyor  */
+/* asagıda goruldugu gıbı box21 bulundugu yerden konumlandırıldıgı için 
+diğer boxın uzerıne bındı */
+ div.box21{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  top: 20px;
+  left: 20px;
+  /* eger kırmızı kutunun sutte olmasını sıtersek z index vermemiz gerekir */
+  z-index: 1;
+}
+
+ div.box22{
+  width: 100px;
+  height: 100px;
+  background-color:blue;
+  position: relative;
+ }
+
+/* POSİTİON ABSOLUTE */
+/* position absolute verildiğinde, absoulth içinde bulundugu 
+divin alanlarını kendıne sınır kabul eder yani absolute verilen inner box
+right20 verildiginde outer boxa gore hareket eder
+!!absoluteın calısması için outer boxa bir position ozellıgı verilmelidir
+!!absolute sayesınde outorbox nereeye hareket ederse etsin inner outerın ıcındeki aynı konumunda kalır  */
+div.outer-box{
+  width: 200px;
+  height: 200px;
+  background-color: yellow;
+  position: relative;
+
+  left: 100px;
+  top: 100px;
+}
+
+div.inner-box{
+  width: 50px;
+  height: 50px;
+  background-color: green;
+  position: absolute;
+  
+  right: 10px;
+  top: 10px;
+}
+
+
+/* CSS FLOAT (KAYMA) artık cok kullanılmıyor flex box kullanılıyor */
+/* float left ile resim sola yaslanır ve yazılar yanıda devam eder */
+div.box23 img {
+  margin-right: 10px;
+  float: left;
+}
+
+/* !!!!!!!!!!!!!!!!! FLEX CONTAİNER !!!!!!!!!! */
+
+.container1{
+  /* normalde * içine verilen ozellıkler */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+/* container içine verilen ozellıkler */
+
+  width: 75%; /*  container widthi*/
+  margin: 0 auto;/* sayfayı ortalaması için */
+  display: flex; /* display flex ozellıgı */
+  flex-direction: row; /* boxların sıralanması için kullanılır column verirsek alt alta sıralanır */
+ 
+ 
+  /* yatayda sıralamak için justifycont kullanıyoruz */
+ justify-content:flex-start ;/* soldan baslar */
+/* justify-content: flex-end;  sağdan baslar */
+/* justify-content: center;     tam ortaya sıralayabilir */
+/* justify-content: space-between;  orta sola ve saga yaslar */ 
+/* justify-content: space-around;  2/1 boslıklarla yapar */
+/* justify-content: space-evenly;   heryere eşit boşluk */
+
+
+/* dikeyde sıralama için alignitems kullanıyoruz */
+  align-items: center;/* box ve divleri ortalar */
+  /* align-items: flex-start; yukarıdan baslar */
+  /* align-items: flex-end; aşagıdan baslatır */
+  /* align-items: stretch;  tum ekranı kaplar */
+  /* align-items: baseline;  tek bir çizgiye göre hizaalr */
+
+
+  height: 600px; /* yüksekliği */
+  background-color: black; /*arka planı  */
+  
+}
+.box24{
+  text-align: center;
+  background: #f2f2f2;
+  width: 200px;
+  border: 1px solid red;
+
+}
+
+/* *************** */
+/* FLEX-WRAP  */
+/* flex wrap ozellıgı default olarak boxların yan yana devam etmesini fakat content boyularının
+küçülmesine neden oluyor */
+
+
+.container2{
+  /* normalde * içine verilen ozellıkler */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+/* container içine verilen ozellıkler */
+
+  width: 75%; /*  container widthi*/
+  margin: 0 auto;/* sayfayı ortalaması için */
+  display: flex; /* display flex ozellıgı */ 
+  justify-content:flex-start ;/* soldan baslar */
+
+  min-height: 600px; /* yüksekliği */
+  background-color: black; /*arka planı  */
+
+  flex-wrap: wrap;  /* Bu sayede sıgmayan box alt satıra geçiyor
+  eger bu satırdaki yer de biterse ondan sonraki satıra geçer 
+  !!fakat bu durumda satır taşma yapar. Bu taşmayı onlemek için
+  height ı min-heigth vermemiz gerekir  */
+  /* flex-wrap: nowrap; hepsini bir satıra sıgdırmak */
+  
+}
+.box25{
+  text-align: center;
+  background: #f2f2f2;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  margin: 10px;
+}
+
+/* EGER FLEX-DİRECTİON=COLUMN yaparsak  */
+/* burada justify content ve align items ters işlem görür */
+
+.container3{
+  /* normalde * içine verilen ozellıkler */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+/* container içine verilen ozellıkler */
+
+  width: 75%; /*  container widthi*/
+  margin: 0 auto;/* sayfayı ortalaması için */
+  display: flex; /* display flex ozellıgı */
+  flex-direction: column; /* boxların sıralanması için kullanılır column verirsek alt alta sıralanır */
+ 
+ 
+  /* flex direction column oldugu için dikeyde sıralamak için justifycont kullanıyoruz */
+ justify-content:flex-start ;/* yukarıdan baslar */
+/* justify-content: flex-end;  asagıdan baslar */
+/* justify-content: center;     tam ortaya sıralayabilir */
+/* justify-content: space-between;  orta yuarı ve asagıyua tam yaslar */ 
+/* justify-content: space-around;  dikeyde 2/1 boslıklarla yapar */
+/* justify-content: space-evenly;  dikeyde heryere eşit boşluk */
+
+
+/* column odlugu için bu sefer bu ozellıkler yatayda sıralama için alignitems kullanıyoruz */
+  align-items: center;/* box ve divleri yataydaortalar */
+  /* align-items: flex-start; soldan baslar */
+  /* align-items: flex-end; sağdan baslatır */
+  /* align-items: stretch;  tum ekranı kaplar */
+  /* align-items: baseline;  tek bir çizgiye göre hizaalr */
+
+
+  height: 600px; /* yüksekliği */
+  background-color: black; /*arka planı  */
+  
+}
+.box26{
+  text-align: center;
+  background: #f2f2f2;
+  width: 200px;
+  border: 1px solid red;
+}
+
+/*  ************************/
+/* ORDER VEREREK SIRA DEĞİŞTİRME */
+/* ALİGN SELF İLE BELİRLİ BİR BOX CLASSA A KONUM VERME */
+/* FLEX GROW ile sayfayı boleriz. ornegin 3 6 4 verirsek 13 parcaya bolerız ona gore konumlanır */
+/* !! EGER SADECE 1 boxa flex-grow:1 verirsek o box kalan boşlukları kaplar
+eger iki boxa birden flex:1 verirsek iki box birden boslukları kaplar */
+
+.container4{
+  /* normalde * içine verilen ozellıkler */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+/* container içine verilen ozellıkler */
+
+  width: 75%; /*  container widthi*/
+  margin: 0 auto;/* sayfayı ortalaması için */
+  display: flex; /* display flex ozellıgı */
+  flex-direction: row; /* boxların sıralanması için kullanılır column verirsek alt alta sıralanır */ 
+  justify-content:space-around ;
+  align-items: center;
+  height: 600px; /* yüksekliği */
+  background-color: black; /*arka planı  */
+  
+}
+.box27{
+  text-align: center;
+  background: #f2f2f2;
+  width: 200px;
+  border: 1px solid red;
+
+}
+.box27-1{
+  /* order 3 diyerek 3. sıraya alırız */
+  order: 3;
+  background: red;
+  flex-grow: 2;
+}
+.box27-2{
+  order: 1;
+  background: blue;
+  flex-grow: 1;
+}
+.box27-3{
+  order: 2;
+  background: green;
+  align-self: flex-end; /* alignself ile bu boxa ozel align verebiliriz  */
+  flex-grow: 3; /* sayfayı verilen butun flexgrowların toplamına boler ve 3/6 şeklinde kaplar  */
+}
+
+
+/* **************************** */
+
+/* RESPONSİVE TASARIMLAR */
+/* responsive tsaarımların amacı telfon tablet ve bilgisayarda px e göre boyutları ve 
+sayfa düzenini ayarlamak istiyoruz */
+/* Tablet için 769 px e kadar olan kısım daha da buyudugunde ise bilgisayar için olan 
+kısım aktif olacak */
+
+
+/* burada box28 adında bır div olusturdukbackraundu kırmızı verdik */
+.box28{
+  display: inline-block;
+  height:200px ;
+  width: 200px;
+  background-color: red;
+}
+/* ardından media eklentisi ile widthi 768px i geçene kadar bu ozellık etkin olsun dedik.
+yani 768px e kadar mavi, 768 px i geçtiginde kırmızı olucak */
+@media(max-width:768px){
+  .box28{
+    background-color: blue;
+  }
+}
+
+/* telefon için yazmak istersek */
+/* bu durumda 769px in altına inerse yeşile doner */
+@media(max-width:500px){
+  .box28{
+    background-color: green;
+  }
+}
+
+/* ***************************** */
+/* eger bir elementin pc ekranın gozukup tablet ekranında gozukmemesini istiyorsa */
+
+.box29{
+  /* display none ozellıgı gozukemmesini saglıyor */
+  display: none;
+}
+
+/* bu sayede minimum 768px e kadar display ozellıgı normal olarak gozukuyor. Ardından
+769px uzerıne altına indiginde display none oluyor ve yazı kayboluyor. Yani minwidth dediğimiz
+minimum768px e kadar olan durumda bu ozellık uygulansın demek oluyor */
+@media(min-width:768px){
+  .box29{
+    display: block;
+  }
+}
+
+
+/* ********************************************* */
+
+.container5{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box30{
+  border: 1px solid red;
+  background: #a7a7a7;
+  padding: 10px;
+  width: 25%;
+}
+/* burada görüldüğü gibi ekran kuculdugude yazılar zor okunuyor bunun için tablet ve telefonda 
+kullanılacak bir mediaq yazıyorum */
+/* tablet */
+@media(max-width:768px){
+  .box30{
+    width: 50%;
+    /* boyutu yuzde50 ye cıktı */
+  }
+}
+/* telefon */
+@media(max-width:500px){
+  .box30{
+    width: 100%;
+    /* boyutu yuzde yuze cıktı */
+  }
+}
+
+/* *********************************************** */
+/* 6.20 de bitti ... son .... */
+
+
+
+
+
+ </style>
+  </head>
+  <body>
+    <header>
+      <h1>header1</h1>
+      <h1 id="logo">logo</h1>
+
+      <ul>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+
+        <li>
+          <a href="#">Services</a>
+        </li>
+      </ul>
+      <header>
+        <h1>header2</h1>
+        <p id="para1" class="lead info">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias,
+          iste?
+        </p>
+        <p class="info">
+          Lorem, ipsum <span class="primary">dolor</span> sit amet consectetur
+          adipisicing elit. Magnam, excepturi?
+        </p>
+        <p class="info">
+            Lorem ipsum <span>dolor </span> sit amet consectetur, adipisicing elit. Modi, maxime!
+        </p>
+        <p>test paragraph</p>
+        <a href="#">Home</a>
+      </header>
+    </header>
+    <br>**************<br>
+    <div class="box-1">
+      <h3>divdivdiv class:box-1</h3>
+    </div>
+    <br>*******<br>
+
+    <div id="box2">box2
+      <div id="box3">box3</div>
+    </div>
+    <br>**********<br>
+    <div id="box4">box4
+    </div>
+    <br>********<br>
+    <div class="box6 box7">box6 box7</div>
+    <div class="box6 box8">box6 box8</div>
+    <br>**************
+    <br>
+     <div class="box9">box9:
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, maiores.
+     </div>
+<br>*****************<br>
+     <div class="box10">box10:
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, dignissimos.     </div>
+<br>*****************<br>
+<div class="box11">box:11
+  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, repellat.
+</div>
+<br>*****************<br>
+<div class="box12">box12 Lorem ipsum dolor sit amet.</div>
+
+<br>****************<br>
+
+  <h1 class="heading1">baslık1</h1>
+  <h1 class="heading2">baslık2</h1>
+  <h1 class="heading3">baslık3</h1>
+<br>*****************<br>
+<div class="box13">
+  <h1>box13 aricle1</h1>
+  <p>Lorem <span>ipsum</span> , dolor sit amet consectetur adipisicing elit. Harum, eum?</p>
+</div>
+<br>***************<br>
+
+<div class="box14">
+  <h1>b14baslık1</h1>
+  <p>box14Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt dolores quo distinctio unde accusantium voluptate. Dolor, eum. Accusamus, maxime?</p>
+
+</div>
+<br>*******************<br>
+
+<div class="box15">
+  <h1>box15baslık1</h1>
+  <p>box15 Lorem, ipsum dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, suscipit.</p>
+</div>
+<br>**************<br>
+<div class="box16">
+  <p>Lorem ipsum dolor sit amet <span>consectetur</span>  adipisicing elit. Hic esse molestias ut repellendus eum vero!</p>
+</div>
+<br>**********************<br>
+
+<i class="fas fa-search"></i>
+<!-- ikon eklerken i etiketi kullanıyoruz classı fontawesomedan kulllanmak istediğimiz ikona göre seçiyoruz -->
+<i class="fas fa-compass" ></i>
+<i class="fa-brands fa-searchengin"></i>
+<br>*************<br>
+
+<a href="#" id="pseudo">This is a link</a>
+<input type="text" id="pseudo2" placeholder="isim giriniz">
+<br>*************<br>
+<a href="#" id="facebook">facebook</a>
+<br>****************<br>
+
+<p id="paragrafpseudo">
+  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium doloribus esse quidem quia velit ipsa neque totam, blanditiis exercitationem dolores molestiae suscipit deserunt debitis repellendus perspiciatis, rerum optio magni sed est corrupti, quod dolore sunt obcaecati! Hic est, quae laudantium quibusdam impedit nam maxime accusantium voluptatibus praesentium esse aliquid amet repellat deleniti voluptatem placeat deserunt necessitatibus quaerat. Necessitatibus commodi assumenda vitae dignissimos aut nemo pariatur fugit similique perspiciatis? Architecto obcaecati, quam perspiciatis rerum natus et? Perferendis corporis dolor obcaecati placeat doloremque doloribus illo nesciunt perspiciatis deserunt voluptatum, praesentium blanditiis voluptates quis a voluptatem dolore error at reiciendis est in ipsa.
+</p>
+<br>***************************<br>
+
+<div class="box17">
+  <p>box17Lorem ipsum dolor sit amet consectetur.</p>
+  <p>box17Lorem ipsum dolor sit amet consectetur.</p>
+  <p>box17Lorem ipsum dolor sit amet consectetur.</p>
+  <p>box17Lorem ipsum dolor sit amet consectetur.</p>
+  <p>box17Lorem ipsum dolor sit amet consectetur.</p>
+</div>
+
+<br>*************************************<br>
+
+<div class="box18">
+  <table class="employess">
+    <thead>
+      <tr>
+        <th>ad</th>
+        <th>departman</th>
+        <th>maaş</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>oktay</td>
+        <td>bilişim</td>
+        <td>4000</td>
+      </tr>
+      
+      <tr>
+        <td>oktay</td>
+        <td>bilişim</td>
+        <td>4000</td>
+      </tr>
+      
+      <tr>
+        <td>oktay</td>
+        <td>bilişim</td>
+        <td>4000</td>
+      </tr>
+      
+      <tr>
+        <td>oktay</td>
+        <td>bilişim</td>
+        <td>4000</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<br>***************************************<br>
+
+<div class="box19">
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa perferendis odit debitis eos voluptates rerum, neque nesciunt facilis sit dolor quas, voluptatibus autem voluptatum animi ducimus impedit officiis. Alias accusantium eius repellendus incidunt neque ut rerum esse vel fugit possimus. Officiis mollitia nisi harum ipsum quisquam. Laboriosam, quam cupiditate! Laudantium?.Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat laudantium esse nihil, nemo ullam nam omnis saepe tenetur inventore dolorum, quasi dolor quae corporis ut incidunt optio neque aut numquam officiis asperiores. Quisquam harum repellat labore culpa laboriosam assumenda minus, accusantium sunt non nobis facilis voluptate eaque reprehenderit aliquid. Consectetur.
+</div>
+
+
+<br>*********************************<br>
+
+
+<div class="box20">Udemy</div>
+
+<br>**************<br>
+
+<div class="box21">box21</div>
+<div class="box22">box22</div>
+
+<br>*************************************************************<br>
+
+<div class="outer-box">
+  outer
+  <div class="inner-box">inner</div>
+</div>
+
+<br><br><br><br><br>
+<br>***************************************************************<br>
+
+
+<div class="box23">
+  
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Ataturk1930s.jpg/220px-Ataturk1930s.jpg" alt="">
+  <!--   !!!!!!!!!!!! (clear:left veya right da yazılır)
+    <div style="clear:both"></div> 
+  ile yazının resimin yanından degil de altından kaymasını saglarız. Eger 2 resim olursa both-->
+  <p>box23 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius numquam quam iure sequi culpa. Repudiandae totam impedit, alias repellendus odit quas doloribus sit ducimus optio nostrum laborum, distinctio ab voluptate sunt cum quasi. Dolore, dolor. Sed nesciunt ab iure maiores eius qui similique esse asperiores consequatur ducimus voluptatibus dolore earum cupiditate iusto alias dicta saepe, reprehenderit ea voluptas perspiciatis veniam laborum animi vitae. Aspernatur, fugiat earum debitis reprehenderit dolores officiis ab animi laudantium expedita minima recusandae numquam, quos quod tenetur excepturi. Quo at nulla consequatur impedit, recusandae perferendis cum, modi soluta unde aliquid, nemo a asperiores est! Reiciendis, nam odio!</p>
+
+</div>
+<br><br><br><br>
+<br>******************************************<br><br>
+
+<div class="container1">
+  <div class="box24">
+    <h1>Article1</h1>
+    <p>b24Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div class="box24">
+    <h1>Article1</h1>
+    <p>b24Lorem ipsum dolor sit amet.</p>
+  </div>  
+  <div class="box24">
+    <h1>Article1</h1>
+    <p>b24Lorem ipsum dolor sit amet.</p>
+  </div>
+</div>
+
+<br>******************************************<br><br>
+
+<div class="container2">
+  <div class="box25">
+    <h1>Article1</h1>
+    <p>b25Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div class="box25">
+    <h1>Article1</h1>
+    <p>b25Lorem ipsum dolor sit amet.</p>
+  </div>  
+  <div class="box25">
+    <h1>Article1</h1>
+    <p>b25Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div class="box25">
+    <h1>Article1</h1>
+    <p>b25Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div class="box25">
+    <h1>Article1</h1>
+    <p>b25Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div class="box25">
+    <h1>Article1</h1>
+    <p>b25Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div class="box25">
+    <h1>Article1</h1>
+    <p>b25Lorem ipsum dolor sit amet.</p>
+  </div>
+  <br>
+  <br>
+ 
+
+</div>
+ <br>****************************************<br><br>
+<!-- flex-direction=column için -->
+ <div class="container3">
+  <div class="box26">
+    <h1>Article1</h1>
+    <p>b26Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div class="box26">
+    <h1>Article1</h1>
+    <p>b26Lorem ipsum dolor sit amet.</p>
+  </div>  
+  <div class="box26">
+    <h1>Article1</h1>
+    <p>b26Lorem ipsum dolor sit amet.</p>
+  </div>
+</div>
+<br>*****************************************<br>
+
+
+<div class="container4">
+  <div class="box27 box27-1">
+    <h1>Article1</h1>
+    <p>b27-1Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div class="box27 box27-2">
+    <h1>Article1</h1>
+    <p>b27-2Lorem ipsum dolor sit amet.</p>
+  </div>  
+  <div class="box27 box27-3">
+    <h1>Article1</h1>
+    <p>b27-3Lorem ipsum dolor sit amet.</p>
+  </div>
+</div>
+
+<br>***********************************<br><br>
+
+<div class="box28"></div>
+
+<br>***********************************<br><br>
+
+<div class="box29">
+  <p>box29Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, illum.</p>
+</div>
+
+<br>****************************************************<br><br>
+
+<div class="container5">
+  <div class="box30">
+    <h1>article1</h1>
+    <p>box30Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, molestias.</p>
+  </div>
+  <div class="box30">
+    <h1>article1</h1>
+    <p>box30Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, molestias.</p>
+  </div>
+  <div class="box30">
+    <h1>article1</h1>
+    <p>box30Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, molestias.</p>
+  </div>
+  <div class="box30">
+    <h1>article1</h1>
+    <p>box30Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, molestias.</p>
+  </div>
+</div>
+
+<br>**************************************<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+
+</html>
